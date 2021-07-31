@@ -5,11 +5,41 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "next start"
+    "start": "next start",
+    "lint": "prettier ./src --write && eslint --fix ."
   },
   "dependencies": {
-    "next": "11.0.1",
+    "@types/next": "^9.0.0",
+    "@types/node-fetch": "^2.5.10",
+    "@types/prismjs": "^1.16.6",
+    "@types/react": "^17.0.11",
+    "@typescript-eslint/eslint-plugin": "^4.27.0",
+    "@typescript-eslint/parser": "^4.28.5",
+    "autoprefixer": "^10.2.6",
+    "eslint": "^7.28.0",
+    "next": "^11.0.0",
+    "node-fetch": "^2.6.1",
+    "postcss-loader": "^6.1.0",
+    "prismjs": "^1.24.1",
     "react": "17.0.2",
-    "react-dom": "17.0.2"
+    "react-dom": "17.0.2",
+    "react-dropzone": "^11.3.2",
+    "react-feather": "^2.0.9",
+    "tailwindcss": "^2.2.7"
+  },
+  "devDependencies": {
+    "eslint-config-next": "^11.0.0",
+    "eslint-config-xo": "^0.37.0",
+    "eslint-config-xo-react": "^0.25.0",
+    "eslint-config-xo-typescript": "^0.43.0",
+    "eslint-plugin-react": "^7.24.0",
+    "eslint-plugin-react-hooks": "^4.2.0",
+    "eslint-plugin-tailwindcss": "^1.13.3",
+    "postcss": "^8.3.5",
+    "postcss-import": "^14.0.2",
+    "prettier": "^2.3.2",
+    "swr": "^0.5.6",
+    "tailwind": "^4.0.0",
+    "typescript": "^4.3.4"
   }
 }
