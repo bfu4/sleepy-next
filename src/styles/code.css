@@ -11,7 +11,7 @@
     background-color: var(--medium-dark);
     border-radius: 7px;
     max-width: fit-content;
-    border: solid 1px var(--accent-50);
+    border: solid 1px var(--dark);
     margin-top: 0.7em;
     padding-top: 0.3em;
     padding-bottom: 0.3em;

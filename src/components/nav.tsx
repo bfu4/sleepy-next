@@ -54,7 +54,7 @@ export function Navbar() {
       <nav className={'navbar ' + (selected ? 'active' : '')}>
         <div className={'pl-6 pt-3 button'}>
           <button onClick={() => handleClick()}>
-            <a>
+            <a className={'pink-icon'}>
               <MenuIcon open={selected} size={30} />
             </a>
           </button>

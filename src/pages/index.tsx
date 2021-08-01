@@ -15,7 +15,7 @@ export default function Index() {
       <div className="container mr-10 ml-10">
         <div className="grid grid-cols-1 pt-10">
           <div className="col-start-1 pb-4 text-lg">
-            Bella Fusari <a>(@bfu4)</a>
+            Bella Fusari <a className={'pink-icon'}>(@bfu4)</a>
           </div>
           <div className="text-sm">yooo?</div>
           <div className="container pt-6 flex">

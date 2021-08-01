@@ -1,8 +1,8 @@
 import {CodeBlock} from '../components/codeblock';
 import Link from 'next/link';
-import {GitHub, Info, X} from 'react-feather';
-import {useState} from 'react';
+import {GitHub} from 'react-feather';
 import {DevIcon} from '../components/icons';
+import {HiddenElement} from '../components/hiddenElement';
 
 export default function Projects() {
   return (
@@ -15,7 +15,7 @@ export default function Projects() {
             icon={<DevIcon className={'pt-1'} name={'java'} size={25} />}
             github={'https://github.com/bfu4/stringparse'}
           />
-          <ShowElement
+          <HiddenElement
             children={
               <CodeBlock
                 language={'xml'}
@@ -35,6 +35,7 @@ export default function Projects() {
                 }
               />
             }
+            tooltip={{data: 'maven usage', position: 'bottom'}}
           />
         </div>
         <div className={'project'}>
@@ -43,10 +44,12 @@ export default function Projects() {
             description={
               'super simple and small event bus structure for golang that allows emissions as go routines.'
             }
+            icon={<DevIcon className={'pt-1'} name={'go'} size={25} />}
             github={'https://github.com/bfu4/golisten'}
           />
-          <ShowElement
+          <HiddenElement
             children={<CodeBlock language={'go'} data={'import "github.com/bfu4/golisten"'} />}
+            tooltip={{data: 'importing', position: 'bottom'}}
           />
         </div>
       </div>
@@ -54,28 +57,11 @@ export default function Projects() {
   );
 }
 
-function ShowElement(props: {children: any}) {
-  const [open, setOpen] = useState(false);
-
-  if (!open) {
-    return (
-      <button onClick={() => setOpen(!open)}>
-        <a>
-          <Info />
-        </a>
-      </button>
-    );
-  }
-  return (
-    <>
-      <button className={'close'}>
-        <X onClick={() => setOpen(!open)} />
-      </button>
-      {props.children}
-    </>
-  );
-}
-
+/**
+ * Project declaration data.
+ * @param props name, description, optional icon, github
+ * @constructor
+ */
 function ProjectDeclaration(props: {
   name: string;
   description?: string;
