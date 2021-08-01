@@ -1,7 +1,7 @@
-import {useState} from 'react';
-import {Icon, Menu, ChevronDown} from 'react-feather';
+import {useState, useEffect} from 'react';
+import {Menu, ChevronDown} from 'react-feather';
 import Link from 'next/link';
-import {useRouter, NextRouter} from 'next/router';
+import {useRouter} from 'next/router';
 
 /**
  * The type for a page.
@@ -33,42 +33,28 @@ export const pages: Page[] = [home, about, projects];
  * @constructor create's a navbar based off of the current page.
  */
 export function Navbar() {
-  const router = useRouter();
-  const [selected, setSelected] = useState(false);
-  const pagesToRender = pages.filter(page => page.path !== router.pathname);
+	const router = useRouter();
+	const [open, setOpen] = useState(false);
+	const pagesToRender = pages.filter(page => page.path !== router.pathname);
 
-  const handleClick = () => {
-    setSelected(!selected);
-  };
+	const handleClick = () => {
+		setOpen(!open);
+	};
 
-  const handler = (path: string) => {
-    if (path !== router.pathname) {
-      router.push(path).then(() => {
-        setSelected(false);
-      });
-    }
-  };
+	useEffect(() => {
+		setOpen(false);
+	}, [router.asPath]);
 
-  return (
-    <>
-      <nav className={'navbar ' + (selected ? 'active' : '')}>
-        <div className={'pl-6 pt-3 button'}>
-          <button onClick={() => handleClick()}>
-            <a className={'pink-icon'}>
-              <MenuIcon open={selected} size={30} />
-            </a>
-          </button>
-          <Children
-            active={selected}
-            pages={pagesToRender}
-            router={router}
-            // Turn it off.
-            handler={handler}
-          />
-        </div>
-      </nav>
-    </>
-  );
+	return (
+		<nav className={'navbar ' + (open ? 'active' : '')}>
+			<div className="pt-3 pl-6 button">
+				<button type="button" onClick={handleClick}>
+					<MenuIcon open={open} size={30} />
+				</button>
+				{open && <Children pages={pagesToRender} />}
+			</div>
+		</nav>
+	);
 }
 
 /**
@@ -76,30 +62,16 @@ export function Navbar() {
  * @param props if the component is active, the pages to render, the router, and a callback.
  * @constructor
  */
-function Children(props: {
-  active: boolean;
-  pages: Page[];
-  router: NextRouter;
-  handler?: (path: string) => void;
-}) {
-  // Return nothing.
-  if (!props.active) {
-    return null;
-  }
-
-  return (
-    <div className={'nav-container grid grid-rows-1 col-auto pl-3'}>
-      {props.pages.map(page => {
-        return (
-          <div className={'nav-button'} key={page.name}>
-            <a onClick={() => props.handler?.(page.path)}>
-              <button>{page.name}</button>
-            </a>
-          </div>
-        );
-      })}
-    </div>
-  );
+function Children(props: {pages: Page[]}) {
+	return (
+		<div className="grid col-auto grid-rows-1 pl-3 nav-container">
+			{props.pages.map(page => (
+				<Link key={page.name} href={page.path}>
+					<a className="nav-button">{page.name}</a>
+				</Link>
+			))}
+		</div>
+	);
 }
 
 /**
@@ -108,8 +80,9 @@ function Children(props: {
  * @constructor creates the component.
  */
 function MenuIcon(props: {open: boolean; size: number}) {
-  if (props.open) {
-    return <ChevronDown size={props.size} />;
-  }
-  return <Menu size={props.size} />;
+	if (props.open) {
+		return <ChevronDown size={props.size} />;
+	}
+
+	return <Menu size={props.size} />;
 }

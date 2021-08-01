@@ -5,17 +5,18 @@ import 'prismjs/components/prism-xml-doc';
 import 'prismjs/components/prism-go';
 
 export function CodeBlock(props: {language: string; data: string}) {
-  const lang = props.language.toLowerCase();
-  const grammar = languages[lang];
+	const lang = props.language.toLowerCase();
+	const grammar = languages[lang];
 
-  if (!grammar) {
-    return null;
-  }
+	if (!grammar) {
+		return null;
+	}
 
-  const data = highlight(props.data, grammar, lang);
-  return (
-    <div className={'pt-1 pb-1 pr-2 pl-2 code-block'}>
-      <pre dangerouslySetInnerHTML={{__html: data}} className={`language-${lang}`} />
-    </div>
-  );
+	const data = highlight(props.data, grammar, lang);
+	return (
+		<div className="pt-1 pr-2 pb-1 pl-2 code-block">
+			{/* eslint-disable-next-line react/no-danger */}
+			<pre dangerouslySetInnerHTML={{__html: data}} className={`language-${lang}`} />
+		</div>
+	);
 }
