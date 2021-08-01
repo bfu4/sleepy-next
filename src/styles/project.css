@@ -1,0 +1,24 @@
+.project-name {
+    font-size: 18px;
+}
+
+.project {
+    padding-left: 1.4em;
+    padding-top: 1.5em;
+    padding-right: 1.4em;
+}
+
+.project-description {
+    font-size: 14px;
+    margin-top: 0.3em;
+    margin-bottom: 0.3em;
+    color: var(--text-darker);
+}
+
+.project-icon {
+    color: var(--text-color);
+    background-color: var(--medium-dark);
+    border-radius: 14px;
+    border: solid 1px var(--accent-50);
+    max-height: max-content;
+}

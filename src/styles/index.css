@@ -1,12 +1,15 @@
 @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono&display=swap');
 @import "code.css";
+@import "project.css";
 
 :root {
     --text-color: #949494;
+    --text-darker: #6a6a6a;
     --accent: #5dea93;
     --accent-50: rgba(93, 234, 147, 0.56);
     --dark: #383838;
     --medium-dark: #242424;
+    --red: #ff6464;
 }
 
 pre, code, kbd, samp, code[class*="language-*"], pre[class*="language-*"] {
@@ -81,4 +84,12 @@ a.icon:hover {
 .nav-container > div:hover {
     background-color: var(--dark);
     border-radius: 7px;
+}
+
+button.close {
+    color: var(--medium-dark);
+}
+
+button.close:hover {
+    color: var(--red);
 }
