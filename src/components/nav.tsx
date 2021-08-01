@@ -90,21 +90,20 @@ function Children(props: {
 }) {
   // Return nothing.
   if (!props.active) {
-    return <></>;
-  } else {
-    // Render.
-    return (
-      <div className={'nav-container grid grid-rows-1 col-auto pl-3'}>
-        {props.pages.map(page => {
-          return (
-            <div className={'nav-button'} key={page.name}>
-              <a onClick={() => props.handler?.(page.path)}>
-                <button>{page.name}</button>
-              </a>
-            </div>
-          );
-        })}
-      </div>
-    );
+    return null;
   }
+
+  return (
+    <div className={'nav-container grid grid-rows-1 col-auto pl-3'}>
+      {props.pages.map(page => {
+        return (
+          <div className={'nav-button'} key={page.name}>
+            <a onClick={() => props.handler?.(page.path)}>
+              <button>{page.name}</button>
+            </a>
+          </div>
+        );
+      })}
+    </div>
+  );
 }
