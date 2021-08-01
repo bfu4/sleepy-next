@@ -1,5 +1,5 @@
-import {useState, useEffect} from 'react';
-import {Menu, ChevronDown} from 'react-feather';
+import {useEffect, useState} from 'react';
+import {ChevronDown, Menu} from 'react-feather';
 import Link from 'next/link';
 import {useRouter} from 'next/router';
 

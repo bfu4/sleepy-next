@@ -1,5 +1,5 @@
 import {SpotifyData} from './spotifyData';
-import {DiscordData, DiscordActivity} from './discord';
+import {DiscordActivity, DiscordData} from './discord';
 
 export interface LanyardData {
 	spotify: SpotifyData;

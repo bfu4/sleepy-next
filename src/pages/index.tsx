@@ -2,7 +2,6 @@ import Head from 'next/head';
 import Link from 'next/link';
 import {Spotify} from '../components/spotify';
 import {GitHub, Twitter} from 'react-feather';
-import {Navbar} from '../components/nav';
 
 export default function Index() {
 	return (
