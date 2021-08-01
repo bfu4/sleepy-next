@@ -35,16 +35,10 @@ export const pages: Page[] = [home, about, projects];
 export function Navbar() {
   const router = useRouter();
   const [selected, setSelected] = useState(false);
-  const [Icon, setIcon] = useState<Icon>(Menu);
   const pagesToRender = pages.filter(page => page.path !== router.pathname);
 
   const handleClick = () => {
     setSelected(!selected);
-    if (selected) {
-      setIcon(ChevronDown);
-    } else {
-      setIcon(Menu);
-    }
   };
 
   const handler = (path: string) => {
@@ -59,11 +53,11 @@ export function Navbar() {
     <>
       <nav className={'navbar ' + (selected ? 'active' : '')}>
         <div className={'pl-6 pt-3 button'}>
-          <Link href={router.pathname}>
-            <a onClick={() => handleClick()}>
-              <Icon size={30} />
+          <button onClick={() => handleClick()}>
+            <a>
+              <MenuIcon open={selected} size={30} />
             </a>
-          </Link>
+          </button>
           <Children
             active={selected}
             pages={pagesToRender}
@@ -106,4 +100,16 @@ function Children(props: {
       })}
     </div>
   );
+}
+
+/**
+ * The menu icon is a component for the menu icon in the nav bar.
+ * @param props open, size.
+ * @constructor creates the component.
+ */
+function MenuIcon(props: {open: boolean; size: number}) {
+  if (props.open) {
+    return <ChevronDown size={props.size} />;
+  }
+  return <Menu size={props.size} />;
 }
