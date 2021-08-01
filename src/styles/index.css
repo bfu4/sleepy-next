@@ -1,95 +1,94 @@
 @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono&display=swap');
-@import "code.css";
-@import "project.css";
+@import 'code.css';
+@import 'project.css';
 
 :root {
-    --text-color: #949494;
-    --text-darker: #6a6a6a;
-    --accent: #5dea93;
-    --accent-50: rgba(93, 234, 147, 0.56);
-    --dark: #383838;
-    --medium-dark: #242424;
-    --red: #ff6464;
+	--text-color: #949494;
+	--text-darker: #6a6a6a;
+	--accent: #5dea93;
+	--accent-50: rgba(93, 234, 147, 0.56);
+	--dark: #383838;
+	--medium-dark: #242424;
+	--red: #ff6464;
 }
 
-pre, code, kbd, samp, code[class*="language-*"], pre[class*="language-*"] {
-    border-radius: 7px;
+pre,
+code,
+kbd,
+samp,
+code[class*='language-*'],
+pre[class*='language-*'] {
+	border-radius: 7px;
 }
 
-html, body {
-    font-family: 'JetBrains Mono', monospace;
-    background-color: #1c1c1c;
+html,
+body {
+	font-family: 'JetBrains Mono', monospace;
+	background-color: #1c1c1c;
 }
 
 html {
-    color: var(--text-color);
+	color: var(--text-color);
 }
 
 a,
 .icon,
 a.icon {
-    outline: 0;
-    color: var(--dark);
-    transition: 0.3s ease;
+	outline: 0;
+	color: var(--dark);
+	transition: 0.3s ease;
 }
 
 a:hover,
 .icon:hover,
 a.icon:hover {
-    color: var(--accent);
+	color: var(--accent);
 }
 
 .grid {
-    max-height: fit-content;
+	max-height: fit-content;
 }
 
 .container > a {
-    padding-right: 0.7em;
+	padding-right: 0.7em;
 }
 
 .navbar {
-    background-color: var(--medium-dark);
-    padding-bottom: 0.7em;
+	background-color: var(--medium-dark);
+	padding-bottom: 0.7em;
 }
 
 .navbar.active {
-    min-width: 100%;
-    background-color: var(--medium-dark);
-    border-bottom: solid var(--accent-50) 1px;
+	min-width: 100%;
+	background-color: var(--medium-dark);
+	border-bottom: solid var(--accent-50) 1px;
 }
 
 .button {
-    max-height: max-content;
-    max-width: fit-content;
+	max-height: max-content;
+	max-width: fit-content;
 }
 
-.nav-button > a {
-    color: var(--text-color);
+.nav-button {
+	color: var(--text-color);
+	padding: 0.4em 100% 0.4em 0.4em;
+	border-radius: 7px;
 }
 
-.nav-button > a:hover {
-    color: var(--accent);
+.nav-button:hover {
+	color: var(--accent);
+	background-color: var(--dark);
 }
 
 .nav-container {
-    min-width: 100%;
-    padding: 0.3em 0 0 0.3em;
-}
-
-.nav-container > div {
-    color: var(--text-color);
-    padding: 0.4em 100% 0.4em 0.4em;
-}
-
-.nav-container > div:hover {
-    background-color: var(--dark);
-    border-radius: 7px;
+	min-width: 100%;
+	padding: 0.3em 0 0 0.3em;
 }
 
 button.close {
-    color: var(--medium-dark);
+	color: var(--medium-dark);
 }
 
 button.close:hover {
-    color: var(--red);
+	color: var(--red);
 }

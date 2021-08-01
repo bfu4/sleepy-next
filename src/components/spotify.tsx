@@ -5,6 +5,7 @@ import React from 'react';
 
 export function Spotify() {
 	const {data} = useLanyard();
+
 	if (!data || !data.spotify) {
 		return <div />;
 	}
