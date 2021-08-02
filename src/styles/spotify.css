@@ -1,5 +1,6 @@
 :root {
     --spotify-green: #1db954;
+    --spotify-shadow: #1c1c1c;
 }
 
 .album-image, .spotify, div {
@@ -32,7 +33,20 @@
 }
 
 .spotify-logo {
-    transform: translateX(-1em) translateY(-0.5rem);
+    transform: translateY(-0.3em) translateX(-0.6em);
+    filter: drop-shadow(-4px 4px 3px var(--spotify-shadow));
     font-size: 30px;
     position: absolute;
+}
+
+svg.spotify-logo-svg, .spotify-logo-svg:hover > * {
+    transition: 0.3s ease;
+}
+
+.spotify-logo:hover, .spotify-logo-svg:hover > path {
+    fill: var(--spotify-green);
+}
+
+.spotify-logo-svg:hover > rect {
+    fill: var(--medium-dark);
 }
