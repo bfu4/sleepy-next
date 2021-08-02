@@ -34,7 +34,7 @@ export function Spotify(props: {className?: string; style?: React.CSSProperties}
 								/>
 							</HandledTooltip>
 							<Link href={`https://open.spotify.com/track/${data.spotify.track_id}`}>
-								<a className="mr-3 text-lg spotify-logo">
+								<a className="mr-3 text-lg spotify-logo" target="_blank" rel="noreferrer">
 									<svg
 										width="30"
 										height="30"
