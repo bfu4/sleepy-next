@@ -14,7 +14,11 @@ export default function Index() {
 			<div className="container mr-10 ml-10">
 				<div className="grid grid-cols-1 pt-10">
 					<div className="col-start-1 pb-4 text-lg">
+<<<<<<< HEAD
 						Bella Fusari <a>(@bfu4)</a>
+=======
+						Bella Fusari <a className="pink-icon">(@bfu4)</a>
+>>>>>>> 4e68bf3 (fix: es-shit)
 					</div>
 					<div className="text-sm">yooo?</div>
 					<div className="container flex pt-6">
@@ -29,7 +33,7 @@ export default function Index() {
 							</a>
 						</Link>
 					</div>
-					<Spotify className={'pt-2'} />
+					<Spotify className="pt-2" />
 				</div>
 			</div>
 		</>

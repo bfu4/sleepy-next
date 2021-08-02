@@ -29,6 +29,7 @@ export function Spotify(props: {className?: string; style?: React.CSSProperties}
 									src={data.spotify.album_art_url}
 									height={100}
 									width={100}
+									alt="album image"
 									className="album-image"
 								/>
 							</HandledTooltip>

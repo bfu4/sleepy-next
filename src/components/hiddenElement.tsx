@@ -8,27 +8,34 @@ import {Info, X} from 'react-feather';
  * @constructor
  */
 export function HiddenElement(props: {children: any; tooltip?: TooltipData}) {
-  const [open, setOpen] = useState(false);
-  if (!open) {
-    return (
-      <HandledTooltip
-        children={
-          <button onClick={() => setOpen(!open)}>
-            <a className={'pink-icon'}>
-              <Info />
-            </a>
-          </button>
-        }
-        tooltip={props.tooltip}
-      />
-    );
-  }
-  return (
-    <>
-      <button className={'close'}>
-        <X onClick={() => setOpen(!open)} />
-      </button>
-      {props.children}
-    </>
-  );
+	const [open, setOpen] = useState(false);
+	if (!open) {
+		return (
+			<HandledTooltip tooltip={props.tooltip}>
+				<button
+					type="button"
+					onClick={() => {
+						setOpen(!open);
+					}}
+				>
+					<a className="pink-icon">
+						<Info />
+					</a>
+				</button>
+			</HandledTooltip>
+		);
+	}
+
+	return (
+		<>
+			<button type="button" className="close">
+				<X
+					onClick={() => {
+						setOpen(!open);
+					}}
+				/>
+			</button>
+			{props.children}
+		</>
+	);
 }

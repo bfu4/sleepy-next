@@ -70,6 +70,7 @@ export default function Projects() {
 				<div className="project">
 					<ProjectDeclaration
 						name="stringparse"
+<<<<<<< HEAD
 						description={'' + 'Concept of lazy, custom, string parsing using optionals.'}
 						icon={<DevIcon className="pt-1" name="java" size={25} />}
 						github="https://github.com/bfu4/stringparse"
@@ -94,17 +95,49 @@ export default function Projects() {
 								}
 							/>
 						}
+=======
+						description="Concept of lazy, custom, string parsing using optionals."
+						icon={<DevIcon className="pt-1" name="java" size={25} />}
+						github="https://github.com/bfu4/stringparse"
+>>>>>>> 4e68bf3 (fix: es-shit)
 					/>
+					<HiddenElement tooltip={{data: 'maven usage', position: 'bottom'}}>
+						<CodeBlock
+							language="xml"
+							data={
+								'<!-- repositories -->\n'
+								+ '<repository>\n'
+								+ '    <id>public</id>\n'
+								+ '    <url>https://nexus.sleeeepyti.me/repository/public</url>\n'
+								+ '</repository>\n'
+								+ '\n'
+								+ '<!-- dependencies -->\n'
+								+ '<dependency>\n'
+								+ '    <groupId>com.github.bfu4</groupId>\n'
+								+ '    <artifactId>stringparse</artifactId>\n'
+								+ '    <version>1.0</version>\n'
+								+ '</dependency>'
+							}
+						/>
+					</HiddenElement>
 				</div>
 				<div className="project">
 					<ProjectDeclaration
 						name="golisten"
 						description="super simple and small event bus structure for golang that allows emissions as go routines."
+<<<<<<< HEAD
 						github="https://github.com/bfu4/golisten"
 					/>
 					<ShowElement
 						children={<CodeBlock language="go" data={'import "github.com/bfu4/golisten"'} />}
+=======
+						icon={<DevIcon className="pt-1" name="go" size={25} />}
+						github="https://github.com/bfu4/golisten"
+>>>>>>> 4e68bf3 (fix: es-shit)
 					/>
+					<HiddenElement tooltip={{data: 'importing', position: 'bottom'}}>
+						<CodeBlock language="go" data={'import "github.com/bfu4/golisten"'} />
+					</HiddenElement>
 				</div>
 			</div>
 		</div>
@@ -151,7 +184,7 @@ function ProjectDeclaration(props: {
 		<div id={id}>
 			<div className="grid grid-cols-5 grid-rows-1 project-name">
 				<div className="container flex col-start-1">
-					<button>
+					<button type="button">
 						<Link href={`#${id}`}>
 							<a>#</a>
 						</Link>
