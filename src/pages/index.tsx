@@ -29,11 +29,9 @@ export default function Index() {
 							</a>
 						</Link>
 					</div>
+					<Spotify className={'pt-2'} />
 				</div>
 			</div>
-			<footer>
-				<Spotify />
-			</footer>
 		</>
 	);
 }

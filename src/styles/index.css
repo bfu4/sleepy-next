@@ -1,15 +1,19 @@
 @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono&display=swap');
-@import 'code.css';
-@import 'project.css';
+@import "code.css";
+@import "project.css";
+@import "~react-tippy/dist/tippy.css";
+@import "spotify.css";
 
 :root {
-	--text-color: #949494;
-	--text-darker: #6a6a6a;
-	--accent: #5dea93;
-	--accent-50: rgba(93, 234, 147, 0.56);
-	--dark: #383838;
-	--medium-dark: #242424;
-	--red: #ff6464;
+    --text-color: #949494;
+    --text-darker: #6a6a6a;
+    --accent: #d987ae;
+    --sub-accent: rgba(217, 135, 174, 0.61);
+    --mint-accent: #5dea93;
+    --mint-accent-50: rgba(93, 234, 147, 0.56);
+    --dark: #383838;
+    --medium-dark: #242424;
+    --red: #ff6464;
 }
 
 pre,
@@ -42,7 +46,11 @@ a.icon {
 a:hover,
 .icon:hover,
 a.icon:hover {
-	color: var(--accent);
+    color: var(--mint-accent);
+}
+
+a.pink-icon:hover {
+    color: var(--accent);
 }
 
 .grid {
@@ -59,9 +67,9 @@ a.icon:hover {
 }
 
 .navbar.active {
-	min-width: 100%;
-	background-color: var(--medium-dark);
-	border-bottom: solid var(--accent-50) 1px;
+    min-width: 100%;
+    background-color: var(--medium-dark);
+    border-bottom: solid var(--sub-accent) 1px;
 }
 
 .button {
@@ -91,4 +99,9 @@ button.close {
 
 button.close:hover {
 	color: var(--red);
+}
+
+.fit {
+	max-height: max-content;
+	max-width: max-content;
 }

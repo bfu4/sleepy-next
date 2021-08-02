@@ -6,8 +6,12 @@ const DISCORD_ID = '606164529210064897';
 
 export default api<LanyardData>({
 	async GET() {
-		return fetch(`https://api.lanyard.rest/v1/users/${DISCORD_ID}`).then(
-			async res => res.json() as Promise<LanyardData>
-		);
+		return fetch(`https://api.lanyard.rest/v1/users/${DISCORD_ID}`).then(async res => {
+			if (res.status !== 200) {
+				return null;
+			}
+			const {data} = await res.json();
+			return data;
+		});
 	},
 });

@@ -9,6 +9,10 @@
     "lint": "prettier ./src --write && eslint --fix ."
   },
   "dependencies": {
+    "@fortawesome/fontawesome": "^1.1.8",
+    "@fortawesome/fontawesome-svg-core": "^1.2.35",
+    "@fortawesome/free-brands-svg-icons": "^5.15.3",
+    "@fortawesome/react-fontawesome": "^0.1.14",
     "@types/next": "^9.0.0",
     "@types/node-fetch": "^2.5.12",
     "@types/prismjs": "^1.16.6",
