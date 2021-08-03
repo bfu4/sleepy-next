@@ -3,17 +3,23 @@
 @import "project.css";
 @import "~react-tippy/dist/tippy.css";
 @import "spotify.css";
+@import "icons.css";
 
 :root {
-    --text-color: #949494;
-    --text-darker: #6a6a6a;
-    --accent: #d987ae;
-    --sub-accent: rgba(217, 135, 174, 0.61);
-    --mint-accent: #5dea93;
-    --mint-accent-50: rgba(93, 234, 147, 0.56);
-    --dark: #383838;
-    --medium-dark: #242424;
+    --text-color: #9199a0;
+    --text-darker: #61686f;
+    --accent: #a385b3;
+    --sub-accent: rgba(163, 132, 179, 0.56);
+    --accent-t: #b8c5d6;
+	--background: #272d2d;
+    --accent-t-50: rgba(184, 197, 214, 0.74);
+    --dark: #1c2121;
+    --medium-dark: rgba(29, 33, 33, 0.78);
     --red: #ff6464;
+}
+
+.text-darker {
+	color: var(--text-darker);
 }
 
 pre,
@@ -28,29 +34,25 @@ pre[class*='language-*'] {
 html,
 body {
 	font-family: 'JetBrains Mono', monospace;
-	background-color: #1c1c1c;
+	background-color: var(--background);
 }
 
 html {
 	color: var(--text-color);
 }
 
-a,
-.icon,
-a.icon {
+a {
 	outline: 0;
 	color: var(--dark);
 	transition: 0.3s ease;
 }
 
-a:hover,
-.icon:hover,
-a.icon:hover {
-    color: var(--mint-accent);
+a:hover {
+    color: var(--accent-t);
 }
 
-a.pink-icon:hover {
-    color: var(--accent);
+button.dark {
+	color: var(--medium-dark);
 }
 
 .grid {

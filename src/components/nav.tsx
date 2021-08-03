@@ -48,7 +48,7 @@ export function Navbar() {
 	return (
 		<nav className={'navbar ' + (open ? 'active' : '')}>
 			<div className="pt-3 pl-6 button">
-				<button type="button" onClick={handleClick}>
+				<button type="button" className="pink-icon" onClick={handleClick}>
 					<MenuIcon open={open} size={30} />
 				</button>
 				{open && <Children pages={pagesToRender} />}

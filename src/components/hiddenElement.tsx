@@ -1,6 +1,6 @@
 import {useState} from 'react';
 import {HandledTooltip, TooltipData} from './tooltip';
-import {Info, X} from 'react-feather';
+import {PlusCircle, X} from 'react-feather';
 
 /**
  * Hide an element under an info button.
@@ -18,9 +18,9 @@ export function HiddenElement(props: {children: any; tooltip?: TooltipData}) {
 						setOpen(!open);
 					}}
 				>
-					<a className="pink-icon">
-						<Info />
-					</a>
+					<button type="button" className="pink-icon dark">
+						<PlusCircle />
+					</button>
 				</button>
 			</HandledTooltip>
 		);

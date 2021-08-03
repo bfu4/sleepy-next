@@ -1,7 +1,7 @@
 @import "~devicons/css/devicons.min.css";
 
 :root {
-    --keyword: #66b191;
+    --keyword: #837b89;
     --constant: #c4c0c0;
     --function: #b4758d;
 }
@@ -22,7 +22,7 @@
 .token.prolog,
 .token.doctype,
 .token.cdata {
-    color: #999;
+    color: var(--text-darker);
 }
 
 .token.punctuation {
@@ -33,11 +33,11 @@
 .token.attr-name,
 .token.namespace,
 .token.deleted {
-    color: #e2777a;
+    color: #6eaa88;
 }
 
 .token.function-name {
-    color: #6196cc;
+    color: #9fb1cb;
 }
 
 .token.boolean,
@@ -66,7 +66,7 @@
 .token.attr-value,
 .token.regex,
 .token.variable {
-    color: #7ec699;
+    color: var(--text-color);
 }
 
 .token.operator,
@@ -88,5 +88,5 @@
 }
 
 .token.inserted {
-    color: green;
+    color: var(--accent-t);
 }

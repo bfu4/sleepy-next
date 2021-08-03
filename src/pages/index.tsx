@@ -1,7 +1,7 @@
 import Head from 'next/head';
 import Link from 'next/link';
 import {Spotify} from '../components/spotify';
-import {GitHub, Twitter} from 'react-feather';
+import {GitHub, Linkedin, Mail, Twitter} from 'react-feather';
 
 export default function Index() {
 	return (
@@ -20,16 +20,26 @@ export default function Index() {
 						Bella Fusari <a className="pink-icon">(@bfu4)</a>
 >>>>>>> 4e68bf3 (fix: es-shit)
 					</div>
-					<div className="text-sm">yooo?</div>
+					<div className="text-sm text-darker">yooo?</div>
 					<div className="container flex pt-6">
 						<Link href="https://github.com/bfu4">
-							<a target="_blank" rel="noreferrer">
+							<a target="_blank" rel="noreferrer" className="github">
 								<GitHub size={30} />
 							</a>
 						</Link>
 						<Link href="https://twitter.com/bellafusari1">
-							<a target="_blank" rel="noreferrer">
+							<a target="_blank" rel="noreferrer" className="twitter">
 								<Twitter size={30} />
+							</a>
+						</Link>
+						<Link href="https://linked.in/in/bella-fusari">
+							<a target="_blank" rel="noreferrer" className="linkedin">
+								<Linkedin size={30} />
+							</a>
+						</Link>
+						<Link href="mailto:bella@localhost22.com">
+							<a target="_blank" className="mail">
+								<Mail size={30} />
 							</a>
 						</Link>
 					</div>
