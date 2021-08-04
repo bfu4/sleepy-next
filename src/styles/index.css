@@ -16,6 +16,7 @@
     --dark: #1c2121;
     --medium-dark: rgba(29, 33, 33, 0.78);
     --red: #ff6464;
+	--darkest: #161a1a;
 }
 
 .text-darker {
@@ -66,12 +67,15 @@ button.dark {
 .navbar {
 	background-color: var(--medium-dark);
 	padding-bottom: 0.7em;
+	box-shadow: 0 3px 15px var(--darkest);
 }
 
 .navbar.active {
     min-width: 100%;
     background-color: var(--medium-dark);
     border-bottom: solid var(--sub-accent) 1px;
+	box-shadow: 0 3px 15px var(--darkest);
+
 }
 
 .button {
