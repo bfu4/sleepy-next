@@ -8,6 +8,7 @@
 :root {
     --text-color: #9199a0;
     --text-darker: #61686f;
+	--text-darkest: #494e53;
     --accent: #a385b3;
     --sub-accent: rgba(163, 132, 179, 0.56);
     --accent-t: #b8c5d6;
@@ -36,15 +37,12 @@ html,
 body {
 	font-family: 'JetBrains Mono', monospace;
 	background-color: var(--background);
-}
-
-html {
 	color: var(--text-color);
 }
 
 a {
 	outline: 0;
-	color: var(--dark);
+	color: var(--text-darkest);
 	transition: 0.3s ease;
 }
 
