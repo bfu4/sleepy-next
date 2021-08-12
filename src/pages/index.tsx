@@ -1,17 +1,17 @@
-import Head from 'next/head';
 import Link from 'next/link';
 import {Spotify} from '../components/spotify';
 import {GitHub, Linkedin, Mail, Twitter} from 'react-feather';
+import {DynamicMeta, MetaProps} from '../components/dynamicMeta';
+
+const DESCRIPTION_META: MetaProps = {name: 'description', content: ':check:'};
+const VIEW_META: MetaProps = {name: 'viewport', content: 'initial-scale=1.0, width=device-width'};
+const THEME_COLOR: MetaProps = {name: 'theme-color', content: '#b8c5d6'};
 
 export default function Index() {
 	return (
 		<>
-			<Head>
-				<title>@bfu4</title>
-				<meta name="description" content=":check:" />
-				<link rel="icon" href="/favicon.ico" />
-			</Head>
-			<div className="container mr-10 ml-10">
+			<DynamicMeta title="@bfu4" meta={[DESCRIPTION_META, VIEW_META, THEME_COLOR]} />
+			<div className="mx-10">
 				<div className="grid grid-cols-1 pt-10">
 					<div className="col-start-1 pb-4 text-lg">
 <<<<<<< HEAD

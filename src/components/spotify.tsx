@@ -15,7 +15,7 @@ export function Spotify(props: {className?: string; style?: React.CSSProperties}
 	return (
 		<div className={`${props.className ?? ''} container flex`} style={props.style}>
 			<div className="my-2 fit spotify">
-				<div className="grid grid-cols-2 py-2 my-1">
+				<div className="container flex py-2 my-1">
 					<div className="grid grid-cols-1 col-start-1 col-end-1 grid-rows-2 py-4 pl-3 text-sm text-left fit embed-text">
 						<div className="container flex row-start-1 row-end-1 font-bold">
 							{data.spotify.song}
@@ -23,7 +23,7 @@ export function Spotify(props: {className?: string; style?: React.CSSProperties}
 						<div className="row-start-2">{data.spotify.artist}</div>
 					</div>
 					<div className="col-start-2 col-end-2 pt-2.5 pr-2 pl-4 fit wrap">
-						<div className="container spotify-image">
+						<div className="spotify-image">
 							<HandledTooltip tooltip={{data: data.spotify.album, position: 'right'}}>
 								<Image
 									src={data.spotify.album_art_url}

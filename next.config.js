@@ -1,5 +1,5 @@
 module.exports = {
-    images: {
-        domains: ['i.scdn.co'],
-    },
-}
+	images: {
+		domains: ['i.scdn.co', 'http.cat'],
+	},
+};
