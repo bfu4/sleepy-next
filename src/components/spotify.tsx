@@ -13,9 +13,12 @@ export function Spotify(props: {className?: string; style?: React.CSSProperties}
 	}
 
 	return (
-		<div className={`${props.className ?? ''} container flex`} style={props.style}>
-			<div className="my-2 fit spotify">
-				<div className="container flex py-2 my-1">
+		<div
+			className={`${props.className ?? ''} container flex max-h-max min-h-max`}
+			style={props.style}
+		>
+			<div className="my-2 fit">
+				<div className="container flex py-2 px-3 my-1 spotify">
 					<div className="grid grid-cols-1 col-start-1 col-end-1 grid-rows-2 py-4 pl-3 text-sm text-left fit embed-text">
 						<div className="container flex row-start-1 row-end-1 font-bold">
 							{data.spotify.song}

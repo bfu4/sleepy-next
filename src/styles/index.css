@@ -54,6 +54,15 @@ button.dark {
 	color: var(--medium-dark);
 }
 
+button.menu {
+	color: var(--background);
+	transition: 0.4s ease-out;
+}
+
+button.menu:hover {
+	color: var(--text-darkest);
+}
+
 .grid {
 	max-height: fit-content;
 }
@@ -65,15 +74,12 @@ button.dark {
 .navbar {
 	background-color: var(--medium-dark);
 	padding-bottom: 0.7em;
+	border-radius: 7px;
 	box-shadow: 0 3px 15px var(--darkest);
 }
 
-.navbar.active {
-    min-width: 100%;
-    background-color: var(--medium-dark);
-    border-bottom: solid var(--sub-accent) 1px;
+.nav-sel {
 	box-shadow: 0 3px 15px var(--darkest);
-
 }
 
 .button {
@@ -83,13 +89,12 @@ button.dark {
 
 .nav-button {
 	color: var(--text-color);
-	padding: 0.4em 100% 0.4em 0.4em;
 	border-radius: 7px;
+	background-color: var(--medium-dark);
 }
 
 .nav-button:hover {
-	color: var(--accent);
-	background-color: var(--dark);
+	background-color: var(--text-darkest);
 }
 
 .nav-container {
@@ -108,4 +113,10 @@ button.close:hover {
 .fit {
 	max-height: max-content;
 	max-width: max-content;
+}
+
+.profile, img.profile {
+	border-radius: 50%;
+	transform: translateX(-0.2em) scale(0.8, 0.8);
+	box-shadow: 2px 3px 1px var(--darkest);
 }
