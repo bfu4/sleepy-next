@@ -4,7 +4,7 @@ import {DynamicMeta, MetaProps} from '../components/dynamicMeta';
 import Image from 'next/image';
 import {Spotify} from '../components/spotify';
 
-const DESCRIPTION_META: MetaProps = {name: 'description', content: ':check:'};
+const DESCRIPTION_META: MetaProps = {name: 'description', content: 'bella fusari'};
 const VIEW_META: MetaProps = {name: 'viewport', content: 'initial-scale=1.0, width=device-width'};
 const THEME_COLOR: MetaProps = {name: 'theme-color', content: '#b8c5d6'};
 
