@@ -3,59 +3,34 @@ import Link from 'next/link';
 import {GitHub} from 'react-feather';
 import {DevIcon} from '../components/icons';
 import {HiddenElement} from '../components/hiddenElement';
+import {Project, PROJECTS} from '../components/projects';
 
 export default function Projects() {
-<<<<<<< HEAD
-  return (
-    <div className={'grid grid-cols-1'}>
-      <div className={'col-start-1'}>
-        <div className={'project'}>
-          <ProjectDeclaration
-            name={'stringparse'}
-            description={'' + 'Concept of lazy, custom, string parsing using optionals.'}
-            icon={<DevIcon className={'pt-1'} name={'java'} size={25} />}
-            github={'https://github.com/bfu4/stringparse'}
-          />
-          <HiddenElement
-            children={
-              <CodeBlock
-                language={'xml'}
-                data={
-                  '<!-- repositories -->\n' +
-                  '<repository>\n' +
-                  '    <id>public</id>\n' +
-                  '    <url>https://nexus.sleeeepyti.me/repository/public</url>\n' +
-                  '</repository>\n' +
-                  '\n' +
-                  '<!-- dependencies -->\n' +
-                  '<dependency>\n' +
-                  '    <groupId>com.github.bfu4</groupId>\n' +
-                  '    <artifactId>stringparse</artifactId>\n' +
-                  '    <version>1.0</version>\n' +
-                  '</dependency>'
-                }
-              />
-            }
-            tooltip={{data: 'maven usage', position: 'bottom'}}
-          />
-        </div>
-        <div className={'project'}>
-          <ProjectDeclaration
-            name={'golisten'}
-            description={
-              'super simple and small event bus structure for golang that allows emissions as go routines.'
-            }
-            icon={<DevIcon className={'pt-1'} name={'go'} size={25} />}
-            github={'https://github.com/bfu4/golisten'}
-          />
-          <HiddenElement
-            children={<CodeBlock language={'go'} data={'import "github.com/bfu4/golisten"'} />}
-            tooltip={{data: 'importing', position: 'bottom'}}
-          />
-        </div>
-      </div>
-    </div>
-  );
+	return (
+		<div className="grid grid-cols-1">
+			<div className="col-start-1">
+				{PROJECTS.map(project => (
+					<ProjectElement key={project.name} project={project} />
+				))}
+			</div>
+		</div>
+	);
+}
+
+function ProjectElement(props: {project: Project}): JSX.Element {
+	return (
+		<div className="project">
+			<ProjectDeclaration
+				name={props.project.name}
+				description={props.project.description}
+				icon={props.project.icon}
+				github={props.project.url}
+			/>
+			<HiddenElement tooltip={props.project.tooltip}>
+				<CodeBlock language={props.project.usageLanguage} data={props.project.usage} />
+			</HiddenElement>
+		</div>
+	);
 }
 
 /**
@@ -63,116 +38,6 @@ export default function Projects() {
  * @param props name, description, optional icon, github
  * @constructor
  */
-=======
-	return (
-		<div className="grid grid-cols-1">
-			<div className="col-start-1">
-				<div className="project">
-					<ProjectDeclaration
-						name="stringparse"
-<<<<<<< HEAD
-						description={'' + 'Concept of lazy, custom, string parsing using optionals.'}
-						icon={<DevIcon className="pt-1" name="java" size={25} />}
-						github="https://github.com/bfu4/stringparse"
-					/>
-					<ShowElement
-						children={
-							<CodeBlock
-								language="xml"
-								data={
-									'<!-- repositories -->\n'
-                  + '<repository>\n'
-                  + '    <id>public</id>\n'
-                  + '    <url>https://nexus.sleeeepyti.me/repository/public</url>\n'
-                  + '</repository>\n'
-                  + '\n'
-                  + '<!-- dependencies -->\n'
-                  + '<dependency>\n'
-                  + '    <groupId>com.github.bfu4</groupId>\n'
-                  + '    <artifactId>stringparse</artifactId>\n'
-                  + '    <version>1.0</version>\n'
-                  + '</dependency>'
-								}
-							/>
-						}
-=======
-						description="Concept of lazy, custom, string parsing using optionals."
-						icon={<DevIcon className="pt-1" name="java" size={25} />}
-						github="https://github.com/bfu4/stringparse"
->>>>>>> 4e68bf3 (fix: es-shit)
-					/>
-					<HiddenElement tooltip={{data: 'maven usage', position: 'bottom'}}>
-						<CodeBlock
-							language="xml"
-							data={
-								'<!-- repositories -->\n'
-								+ '<repository>\n'
-								+ '    <id>public</id>\n'
-								+ '    <url>https://nexus.sleeeepyti.me/repository/public</url>\n'
-								+ '</repository>\n'
-								+ '\n'
-								+ '<!-- dependencies -->\n'
-								+ '<dependency>\n'
-								+ '    <groupId>com.github.bfu4</groupId>\n'
-								+ '    <artifactId>stringparse</artifactId>\n'
-								+ '    <version>1.0</version>\n'
-								+ '</dependency>'
-							}
-						/>
-					</HiddenElement>
-				</div>
-				<div className="project">
-					<ProjectDeclaration
-						name="golisten"
-						description="super simple and small event bus structure for golang that allows emissions as go routines."
-<<<<<<< HEAD
-						github="https://github.com/bfu4/golisten"
-					/>
-					<ShowElement
-						children={<CodeBlock language="go" data={'import "github.com/bfu4/golisten"'} />}
-=======
-						icon={<DevIcon className="pt-1" name="go" size={25} />}
-						github="https://github.com/bfu4/golisten"
->>>>>>> 4e68bf3 (fix: es-shit)
-					/>
-					<HiddenElement tooltip={{data: 'importing', position: 'bottom'}}>
-						<CodeBlock language="go" data={'import "github.com/bfu4/golisten"'} />
-					</HiddenElement>
-				</div>
-			</div>
-		</div>
-	);
-}
-
-function ShowElement(props: {children: any}) {
-	const [open, setOpen] = useState(false);
-
-	if (!open) {
-		return (
-			<button onClick={() => {
-				setOpen(!open);
-			}}
-			>
-				<a>
-					<Info />
-				</a>
-			</button>
-		);
-	}
-
-	return (
-		<>
-			<button className="close">
-				<X onClick={() => {
-					setOpen(!open);
-				}} />
-			</button>
-			{props.children}
-		</>
-	);
-}
-
->>>>>>> a6d7f3b (project cleanup)
 function ProjectDeclaration(props: {
 	name: string;
 	description?: string;

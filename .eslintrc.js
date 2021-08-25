@@ -23,6 +23,7 @@ module.exports = {
     'import/no-anonymous-default-export': 'off',
     'tailwindcss/classnames-order': 'error',
     'tailwindcss/no-contradicting-classname': 'error',
+    'operator-linebreak': 'off',
   },
   ignorePatterns: ['**/*.js'],
 };
