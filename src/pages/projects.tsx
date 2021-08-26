@@ -1,7 +1,6 @@
 import {CodeBlock} from '../components/codeblock';
 import Link from 'next/link';
 import {GitHub} from 'react-feather';
-import {DevIcon} from '../components/icons';
 import {HiddenElement} from '../components/hiddenElement';
 import {Project, PROJECTS} from '../components/projects';
 
