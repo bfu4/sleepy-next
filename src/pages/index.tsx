@@ -51,7 +51,7 @@ export default function Index() {
 										<Twitter size={30} />
 									</a>
 								</Link>
-								<Link href="https://linked.in/in/bella-fusari">
+								<Link href="https://linkedin.com/in/bella-fusari">
 									<a target="_blank" rel="noreferrer" className="linkedin">
 										<Linkedin size={30} />
 									</a>
