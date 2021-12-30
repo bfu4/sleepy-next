@@ -3,6 +3,7 @@ import {GitHub, Linkedin, Mail, Twitter} from 'react-feather';
 import {DynamicMeta, MetaProps} from '../components/dynamicMeta';
 import Image from 'next/image';
 import {Spotify} from '../components/spotify';
+import {Polywork} from '../components/polywork';
 
 const DESCRIPTION_META: MetaProps = {name: 'description', content: 'bella fusari'};
 const VIEW_META: MetaProps = {name: 'viewport', content: 'initial-scale=1.0, width=device-width'};
@@ -59,6 +60,11 @@ export default function Index() {
 								<Link href="mailto:bella@localhost22.com">
 									<a target="_blank" className="mail">
 										<Mail size={30} />
+									</a>
+								</Link>
+								<Link href="https://polywork.com/bellafusari">
+									<a target="_blank" className="polywork-svg">
+										<Polywork />
 									</a>
 								</Link>
 							</div>

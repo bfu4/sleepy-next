@@ -1,0 +1,39 @@
+.polywork > path.sq {
+	fill: var(--text-darkest);
+}
+
+.polywork:hover > * {
+	transition: 0.3s ease-in-out;
+}
+
+.polywork:hover > path.s1 {
+	fill: var(--polywork-s1);
+}
+
+.polywork:hover > path.s2 {
+	fill: var(--polywork-s2);
+}
+
+.polywork:hover > path.s3 {
+	fill: var(--polywork-s3);
+}
+
+.polywork:hover > path.s4 {
+	fill: var(--polywork-s4);
+}
+
+.polywork:hover > path.s5 {
+	fill: var(--polywork-s5);
+}
+
+.polywork:hover > path.s6 {
+	fill: var(--polywork-s6);
+}
+
+.polywork:hover > path.s7 {
+	fill: var(--polywork-s7);
+}
+
+.polywork:hover > path.s8 {
+	fill: var(--polywork-s8);
+}

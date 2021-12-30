@@ -1,23 +1,32 @@
 @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono&display=swap');
-@import "code.css";
-@import "project.css";
-@import "~react-tippy/dist/tippy.css";
-@import "spotify.css";
-@import "icons.css";
+@import 'code.css';
+@import 'project.css';
+@import '~react-tippy/dist/tippy.css';
+@import 'spotify.css';
+@import 'icons.css';
+@import 'polywork.css';
 
 :root {
-    --text-color: #9199a0;
-    --text-darker: #61686f;
+	--text-color: #9199a0;
+	--text-darker: #61686f;
 	--text-darkest: #494e53;
-    --accent: #a385b3;
-    --sub-accent: rgba(163, 132, 179, 0.56);
-    --accent-t: #b8c5d6;
+	--accent: #a385b3;
+	--sub-accent: rgba(163, 132, 179, 0.56);
+	--accent-t: #b8c5d6;
 	--background: #272d2d;
-    --accent-t-50: rgba(184, 197, 214, 0.74);
-    --dark: #1c2121;
-    --medium-dark: rgba(29, 33, 33, 0.78);
-    --red: #ff6464;
+	--accent-t-50: rgba(184, 197, 214, 0.74);
+	--dark: #1c2121;
+	--medium-dark: rgba(29, 33, 33, 0.78);
+	--red: #ff6464;
 	--darkest: #161a1a;
+	--polywork-s1: #40be88;
+	--polywork-s2: #6776f9;
+	--polywork-s3: #ff7474;
+	--polywork-s4: #f2994a;
+	--polywork-s5: #bd83ce;
+	--polywork-s6: #f2c94c;
+	--polywork-s7: #37c2e2;
+	--polywork-s8: #88cfb0;
 }
 
 .text-darker {
@@ -47,7 +56,7 @@ a {
 }
 
 a:hover {
-    color: var(--accent-t);
+	color: var(--accent-t);
 }
 
 button.dark {
@@ -115,7 +124,8 @@ button.close:hover {
 	max-width: max-content;
 }
 
-.profile, img.profile {
+.profile,
+img.profile {
 	border-radius: 50%;
 	transform: translateX(-0.2em) scale(0.8, 0.8);
 	box-shadow: 2px 3px 1px var(--darkest);

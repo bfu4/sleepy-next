@@ -1,20 +1,20 @@
-@import "~devicons/css/devicons.min.css";
+@import '~devicons/css/devicons.min.css';
 
 :root {
-    --keyword: #837b89;
-    --constant: #c4c0c0;
-    --function: #b4758d;
+	--keyword: #837b89;
+	--constant: #c4c0c0;
+	--function: #b4758d;
 }
 
 .code-block {
-    font-size: 13px;
-    background-color: var(--medium-dark);
-    border-radius: 7px;
-    max-width: fit-content;
-    border: solid 1px var(--dark);
-    margin-top: 0.7em;
-    padding-top: 0.3em;
-    padding-bottom: 0.3em;
+	font-size: 13px;
+	background-color: var(--medium-dark);
+	border-radius: 7px;
+	max-width: fit-content;
+	border: solid 1px var(--dark);
+	margin-top: 0.7em;
+	padding-top: 0.3em;
+	padding-bottom: 0.3em;
 }
 
 .token.comment,
@@ -22,35 +22,35 @@
 .token.prolog,
 .token.doctype,
 .token.cdata {
-    color: var(--text-darker);
+	color: var(--text-darker);
 }
 
 .token.punctuation {
-    color: #ccc;
+	color: #ccc;
 }
 
 .token.tag,
 .token.attr-name,
 .token.namespace,
 .token.deleted {
-    color: #6eaa88;
+	color: #6eaa88;
 }
 
 .token.function-name {
-    color: #9fb1cb;
+	color: #9fb1cb;
 }
 
 .token.boolean,
 .token.number,
 .token.function {
-    color: var(--function);
+	color: var(--function);
 }
 
 .token.property,
 .token.class-name,
 .token.constant,
 .token.symbol {
-    color: var(--constant);
+	color: var(--constant);
 }
 
 .token.selector,
@@ -58,7 +58,7 @@
 .token.atrule,
 .token.keyword,
 .token.builtin {
-    color: var(--keyword);
+	color: var(--keyword);
 }
 
 .token.string,
@@ -66,27 +66,27 @@
 .token.attr-value,
 .token.regex,
 .token.variable {
-    color: var(--text-color);
+	color: var(--text-color);
 }
 
 .token.operator,
 .token.entity,
 .token.url {
-    color: var(--accent);
+	color: var(--accent);
 }
 
 .token.important,
 .token.bold {
-    font-weight: bold;
+	font-weight: bold;
 }
 .token.italic {
-    font-style: italic;
+	font-style: italic;
 }
 
 .token.entity {
-    cursor: help;
+	cursor: help;
 }
 
 .token.inserted {
-    color: var(--accent-t);
+	color: var(--accent-t);
 }

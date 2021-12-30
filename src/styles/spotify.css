@@ -1,52 +1,56 @@
 :root {
-    --spotify-green: #1db954;
-    --spotify-shadow: rgba(28, 28, 28, 0.68);
+	--spotify-green: #1db954;
+	--spotify-shadow: rgba(28, 28, 28, 0.68);
 }
 
-.album-image, .spotify, div {
-    transition: 0.3s ease;
+.album-image,
+.spotify,
+div {
+	transition: 0.3s ease;
 }
 
 .album-image {
-    max-width: fit-content;
-    max-height: fit-content;
-    border-radius: 10px;
-    pointer-events: none;
+	max-width: fit-content;
+	max-height: fit-content;
+	border-radius: 10px;
+	pointer-events: none;
 }
 
 .spotify > div {
-    padding: 0.4em;
+	padding: 0.4em;
 }
 
 .spotify {
-    min-width: max-content;
-    min-height: max-content;
-    background-color: var(--medium-dark);
-    border-radius: 10px;
-    border: solid 1px var(--dark);
-    position: inherit;
+	min-width: max-content;
+	min-height: max-content;
+	background-color: var(--medium-dark);
+	border-radius: 10px;
+	border: solid 1px var(--dark);
+	position: inherit;
 }
 
 /* thanks devlooskie for relative absolute trick */
 .spotify-image {
-    position: relative;
+	position: relative;
 }
 
 .spotify-logo {
-    transform: translateY(-0.3em) translateX(-0.6em);
-    filter: drop-shadow(-4px 4px 3px var(--spotify-shadow));
-    font-size: 30px;
-    position: absolute;
+	transform: translateY(-0.3em) translateX(-0.6em);
+	filter: drop-shadow(-4px 4px 3px var(--spotify-shadow));
+	font-size: 30px;
+	position: absolute;
 }
 
-svg.spotify-logo-svg, .spotify-logo-svg:hover > * {
-    transition: 0.3s ease;
+svg.spotify-logo-svg,
+.spotify-logo-svg:hover > * {
+	transition: 0.3s ease;
 }
 
-.spotify-logo:hover, .spotify-logo-svg:hover > path {
-    fill: var(--spotify-green);
+.spotify-logo:hover,
+.spotify-logo-svg:hover > path {
+	fill: var(--spotify-green);
 }
 
 .spotify-logo-svg:hover > rect {
-    fill: var(--medium-dark);
+	fill: var(--medium-dark);
 }
