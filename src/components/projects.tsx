@@ -67,13 +67,7 @@ const rf = newProject(
 	'simple reflection based on Function<?,?>s and friendly-to-use enums',
 	<DevIcon className="pt-1" name="java" size={25} />,
 	'https://github.com/bfu4/rf',
-	'<repository>\n' +
-		'<!-- repositories -->\n' +
-		'    <id>public</id>\n' +
-		'    <url>https://nexus.sleeeepyti.me/repository/public</url>\n' +
-		'</repository>\n' +
-		'\n' +
-		'<!-- dependencies -->\n' +
+	'<!-- dependencies -->\n' +
 		'<dependency>\n' +
 		'    <groupId>com.localhost22</groupId>\n' +
 		'    <artifactId>rf</artifactId>\n' +
@@ -115,4 +109,16 @@ const ptypes = newProject(
 	'go',
 	{data: 'importing', position: 'bottom'}
 );
-export const PROJECTS: Project[] = [stringparse, golisten, rf, gomap, ptypes];
+
+const sipshit = newProject(
+	'sipshit',
+	'go',
+	'sip client (work in progress)',
+	<DevIcon className="pt-1" name="go" size={25} />,
+	'https://git.tcp.direct/bfu/sipshit',
+	'import "git.tcp.direct/bfu/sipshit"',
+	'go',
+	{data: 'importing', position: 'bottom'}
+);
+
+export const PROJECTS: Project[] = [rf, stringparse, golisten, gomap, ptypes, sipshit];
