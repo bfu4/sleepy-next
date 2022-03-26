@@ -13,25 +13,20 @@ export function Spotify(props: {className?: string; style?: React.CSSProperties}
 	}
 
 	return (
-		<div
-			className={`${props.className ?? ''} container flex max-h-max min-h-max`}
-			style={props.style}
-		>
-			<div className="my-2 fit">
-				<div className="container flex py-2 px-3 my-1 spotify">
-					<div className="grid grid-cols-1 col-start-1 col-end-1 grid-rows-2 py-4 pl-3 text-sm text-left fit embed-text">
-						<div className="container flex row-start-1 row-end-1 font-bold">
-							{data.spotify.song}
-						</div>
-						<div className="row-start-2">{data.spotify.artist}</div>
+		<div className={`${props.className ?? ''} max-h-max min-h-max`} style={props.style}>
+			<div className="my-4 fit">
+				<div className="container flex px-2 my-1 spotify">
+					<div className="grid grid-cols-1 col-start-1 col-end-1 grid-rows-4 py-4 pl-3 text-sm text-left fit embed-text">
+						<div className="container flex row-start-2 font-bold">{data.spotify.song}</div>
+						<div className="row-start-3">{data.spotify.artist}</div>
 					</div>
 					<div className="col-start-2 col-end-2 pt-2.5 pr-2 pl-4 fit wrap">
 						<div className="spotify-image">
 							<HandledTooltip tooltip={{data: data.spotify.album, position: 'right'}}>
 								<Image
 									src={data.spotify.album_art_url}
-									height={100}
-									width={100}
+									height={90}
+									width={90}
 									alt="album image"
 									className="album-image"
 								/>
