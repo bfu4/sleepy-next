@@ -1,6 +1,5 @@
 import Link from 'next/link';
 import {GitHub, Linkedin, Mail, Twitter} from 'react-feather';
-import {DynamicMeta, MetaProps} from '../components/dynamicMeta';
 import Image from 'next/image';
 import {Spotify} from '../components/spotify';
 import {Polywork} from '../components/polywork';
