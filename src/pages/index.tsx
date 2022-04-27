@@ -3,6 +3,7 @@ import {GitHub, Linkedin, Mail, Twitter} from 'react-feather';
 import Image from 'next/image';
 import {Spotify} from '../components/spotify';
 import {Polywork} from '../components/polywork';
+import {Google} from '../components/google';
 
 export default function Index() {
 	return (
@@ -52,6 +53,11 @@ export default function Index() {
 							<Link href="mailto:bella@localhost22.com">
 								<a target="_blank" className="mail">
 									<Mail size={30} />
+								</a>
+							</Link>
+							<Link href="https://g.dev/bfu">
+								<a target="_blank" className="google">
+									<Google />
 								</a>
 							</Link>
 							<Link href="https://polywork.com/bellafusari">
