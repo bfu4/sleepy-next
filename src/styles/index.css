@@ -8,30 +8,30 @@
 @import 'google.css';
 
 :root {
-    --text-color: #9199a0;
-    --text-darker: #61686f;
-    --text-darkest: #494e53;
-    --accent: #a385b3;
-    --sub-accent: rgba(163, 132, 179, 0.56);
-    --accent-t: #b8c5d6;
-    --background: #272d2d;
-    --accent-t-50: rgba(184, 197, 214, 0.74);
-    --dark: #1c2121;
-    --medium-dark: rgba(29, 33, 33, 0.78);
-    --red: #ff6464;
-    --darkest: #161a1a;
-    --polywork-s1: #40be88;
-    --polywork-s2: #6776f9;
-    --polywork-s3: #ff7474;
-    --polywork-s4: #f2994a;
-    --polywork-s5: #bd83ce;
-    --polywork-s6: #f2c94c;
-    --polywork-s7: #37c2e2;
-    --polywork-s8: #88cfb0;
+	--text-color: #9199a0;
+	--text-darker: #61686f;
+	--text-darkest: #494e53;
+	--accent: #a385b3;
+	--sub-accent: rgba(163, 132, 179, 0.56);
+	--accent-t: #b8c5d6;
+	--background: #272d2d;
+	--accent-t-50: rgba(184, 197, 214, 0.74);
+	--dark: #1c2121;
+	--medium-dark: rgba(29, 33, 33, 0.78);
+	--red: #ff6464;
+	--darkest: #161a1a;
+	--polywork-s1: #40be88;
+	--polywork-s2: #6776f9;
+	--polywork-s3: #ff7474;
+	--polywork-s4: #f2994a;
+	--polywork-s5: #bd83ce;
+	--polywork-s6: #f2c94c;
+	--polywork-s7: #37c2e2;
+	--polywork-s8: #88cfb0;
 }
 
 .text-darker {
-    color: var(--text-darker);
+	color: var(--text-darker);
 }
 
 pre,
@@ -40,94 +40,94 @@ kbd,
 samp,
 code[class*='language-*'],
 pre[class*='language-*'] {
-    border-radius: 7px;
+	border-radius: 7px;
 }
 
 html,
 body {
-    font-family: 'JetBrains Mono', monospace;
-    background-color: var(--background);
-    color: var(--text-color);
+	font-family: 'JetBrains Mono', monospace;
+	background-color: var(--background);
+	color: var(--text-color);
 }
 
 a {
-    outline: 0;
-    color: var(--text-darkest);
-    transition: 0.3s ease;
+	outline: 0;
+	color: var(--text-darkest);
+	transition: 0.3s ease;
 }
 
 a:hover {
-    color: var(--accent-t);
+	color: var(--accent-t);
 }
 
 button.dark {
-    color: var(--medium-dark);
+	color: var(--medium-dark);
 }
 
 button.menu {
-    color: var(--background);
-    transition: 0.4s ease-out;
+	color: var(--background);
+	transition: 0.4s ease-out;
 }
 
 button.menu:hover {
-    color: var(--text-darkest);
+	color: var(--text-darkest);
 }
 
 .grid {
-    max-height: fit-content;
+	max-height: fit-content;
 }
 
 .container > a {
-    padding-right: 0.7em;
+	padding-right: 0.7em;
 }
 
 .navbar {
-    background-color: var(--medium-dark);
-    padding-bottom: 0.7em;
-    border-radius: 7px;
-    box-shadow: 0 3px 15px var(--darkest);
+	background-color: var(--medium-dark);
+	padding-bottom: 0.7em;
+	border-radius: 7px;
+	box-shadow: 0 3px 15px var(--darkest);
 }
 
 .nav-sel {
-    box-shadow: 0 3px 15px var(--darkest);
+	box-shadow: 0 3px 15px var(--darkest);
 }
 
 .button {
-    max-height: max-content;
-    max-width: fit-content;
+	max-height: max-content;
+	max-width: fit-content;
 }
 
 .nav-button {
-    color: var(--text-color);
-    border-radius: 7px;
-    background-color: var(--medium-dark);
+	color: var(--text-color);
+	border-radius: 7px;
+	background-color: var(--medium-dark);
 }
 
 .nav-button:hover {
-    background-color: var(--text-darkest);
+	background-color: var(--text-darkest);
 }
 
 .nav-container {
-    min-width: 100%;
-    padding: 0.3em 0 0 0.3em;
+	min-width: 100%;
+	padding: 0.3em 0 0 0.3em;
 }
 
 button.close {
-    color: var(--medium-dark);
+	color: var(--medium-dark);
 }
 
 button.close:hover {
-    color: var(--red);
+	color: var(--red);
 }
 
 .fit {
-    max-height: max-content;
-    max-width: max-content;
+	max-height: max-content;
+	max-width: max-content;
 }
 
 .profile,
 img.profile {
-    border-radius: 50%;
-    transform: translateX(-0.2em) scale(0.8, 0.8);
-    box-shadow: 2px 3px 1px var(--darkest);
+	border-radius: 50%;
+	transform: translateX(-0.2em) scale(0.8, 0.8);
+	box-shadow: 2px 3px 1px var(--darkest);
 }

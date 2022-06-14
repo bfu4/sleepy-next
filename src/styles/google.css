@@ -1,30 +1,30 @@
 :root {
-    --google-red: #EA4335;
-    --google-yellow: #FBBC05;
-    --google-green: #34A853;
-    --google-blue: #4285F4;
+	--google-red: #ea4335;
+	--google-yellow: #fbbc05;
+	--google-green: #34a853;
+	--google-blue: #4285f4;
 }
 
 g.google > path {
-    fill: var(--text-darkest);
+	fill: var(--text-darkest);
 }
 
 svg:hover > g.google > * {
-    transition: 0.3s ease-in-out;
+	transition: 0.3s ease-in-out;
 }
 
 svg:hover > g.google > path.s1 {
-    fill: var(--google-blue);
+	fill: var(--google-blue);
 }
 
 svg:hover > g.google > path.s2 {
-    fill: var(--google-green);
+	fill: var(--google-green);
 }
 
 svg:hover > g.google > path.s3 {
-    fill: var(--google-yellow);
+	fill: var(--google-yellow);
 }
 
 svg:hover > g.google > path.s4 {
-    fill: var(--google-red);
+	fill: var(--google-red);
 }
